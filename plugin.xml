@@ -18,22 +18,22 @@
 
     <!-- interface -->
     <js-module src="www/email_composer.js" name="EmailComposer">
-        <clobbers target="plugin.email" />
+        <clobbers target="plugins.email" />
     </js-module>
 
     <!-- ios -->
     <platform name="ios">
 
         <config-file target="config.xml" parent="/*">
-		<feature name="EmailComposer">
-			<param name="ios-package" value="APPEmailComposer"/>
-		</feature>
+            <feature name="EmailComposer">
+                <param name="ios-package" value="APPEmailComposer"/>
+            </feature>
         </config-file>
 
-	<header-file src="src/ios/APPEmailComposer.h" />
-	<source-file src="src/ios/APPEmailComposer.m" />
+        <header-file src="src/ios/APPEmailComposer.h" />
+        <source-file src="src/ios/APPEmailComposer.m" />
 
-    <framework src="MessageUI.framework" weak="true" />
+        <framework src="MessageUI.framework" weak="true" />
 
     </platform>
 
@@ -41,11 +41,11 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="EmailComposer">
-                <param name="android-package" value="de.appplant.cordova.plugin.EmailComposer"/>
+                <param name="android-package" value="de.appplant.cordova.plugins.EmailComposer"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/EmailComposer.java" target-dir="src/de/appplant/cordova/plugin" />
+        <source-file src="src/android/EmailComposer.java" target-dir="src/de/appplant/cordova/plugins" />
 
     </platform>
 
